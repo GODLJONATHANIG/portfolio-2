@@ -154,45 +154,64 @@ section {
 }
 
 .hero-info h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.hero-info h1 {
+    font-size: 3.5rem;
+}
+.home{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 4em;
+    background: var(--gradient-white-bg2);
+}
+
+.hero-info{
+    margin-top: 3rem;
+}
+
+.hero-info h3{
     color: var(--font-color);
     font-weight: 300;
     text-transform: uppercase;
     font-size: 1.1rem;
 }
 
-.hero-info h1 {
+.hero-info h1{
     font-size: 3.5rem;
+ 
 }
 
-.text-animate {
-    width: 22.8rem;
-    position: relative;
+.animated-text {
+    font-size: 2em;
+    color: #3498db;
+    animation: fadeIn 2s ease-in-out infinite;
 }
 
-.text-animate h2 {
-    font-size: 24.3px;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    color: transparent;
-    background: var(--gradient-color-bg);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: 0 0;
-    transition: .6s;
-    animation: moveText 3s linear infinite;
-    animation-delay: 2s;
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .animated-text {
+        font-size: 1.5em; /* Adjusted font size for tablets and smaller screens */
+    }
 }
 
-.text-animate h2::before {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: -3px;
-    width: 0;
-    height: 70%;
-    border-right: 2px solid var(--main-color);
-    animation: moveCursorText 3s linear infinite;
-    animation-delay: 2s;
+@media (max-width: 480px) {
+    .animated-text {
+        font-size: 1.2em; /* Further adjusted font size for mobile phones */
+    }
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 .hero-info p {
@@ -370,80 +389,16 @@ section {
     left: 10px;
 }
 
-/* Mobile optimization */
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column;
-        gap: 3rem;
-    }
 
-    .hero-info h1 {
-        font-size: 2.5rem;
-    }
 
-    .text-animate h2 {
-        font-size: 20px;
-        width: 100%;
-    }
 
-    .btn-box {
-        width: 100%;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .social-media {
-        width: 120px;
-    }
-
-    .img-hero img {
-        max-width: 100%;
-    }
-
-    .rotate-text span {
-        width: 250px;
-        height: 250px;
-    }
-
-    .rotate-text .text {
-        width: 350px;
-        height: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-info h1 {
-        font-size: 2rem;
-    }
-
-    .btn-box {
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .text-animate h2 {
-        font-size: 18px;
-        width: 100%;
-    }
-
-    .rotate-text span {
-        width: 200px;
-        height: 200px;
-    }
-
-    .rotate-text .text {
-        width: 300px;
-        height: 300px;
-    }
-}
 
 
 /* ==================== About section css code ============================ */
 .about {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 3rem;
     background-color: #f0f0f0; /* Light background for contrast */
     padding: 2rem; /* Add padding for spacing */
@@ -490,7 +445,7 @@ section {
 }
 
 .about-content p {
-    font-size: 15px;
+    font-size: 19px;
     text-align: justify;
     color: white; /* Change paragraph text color to white */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
@@ -1102,17 +1057,20 @@ h2.counter span{
 
     .timeline-title {
         font-size: 20px; /* Adjust title size for mobile */
+        color: black; /* Set heading color to white */
     }
 
     .timeline-body > p,
     .timeline-body > ul {
         margin-bottom: 10px; /* Add some space between paragraphs */
+        color: black; /* Set text color to white */
     }
+
     .timeline-icon {
         width: 60px; /* Adjust width for mobile */
         height: 60px;
+    }
 }
-  }
     
 
 

@@ -462,7 +462,6 @@ section {
 
 .about-content p {
     font-size: 19px;
-    text-align: justify;
     color: white; /* Change paragraph text color to white */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
     padding: 1rem; /* Padding for the paragraph */
@@ -1108,7 +1107,7 @@ h2.counter span{
 }
 
 .contactSkills {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
     background: #fff;

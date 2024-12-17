@@ -239,7 +239,7 @@ function sendEmail() {
     const subject = encodeURIComponent(document.getElementById('subject').value);
     const message = encodeURIComponent(document.getElementById('message').value);
 
-    const mailtoLink = `mailto:ashishdeshpande93@gmail.com?subject=${subject}&body=First Name: ${firstName}%0D%0ALast Name: ${lastName}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    const mailtoLink = `mailto:aboli.vaishampayan.10@gmail.com?subject=${subject}&body=First Name: ${firstName}%0D%0ALast Name: ${lastName}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
     
     window.location.href = mailtoLink;
 }
